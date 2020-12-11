@@ -1,2 +1,0 @@
-# LitePhish
-Under construction
