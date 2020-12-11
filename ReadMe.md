@@ -36,7 +36,7 @@ git clone https://github.com/DarkSecDevelopers/LitePhish.git
 <li><b>Note:</b> Username/Password will saved in victims/password.txt</li></ol></p><br>
 
 
-<h2> Available phishing sites/templates</h2>
+<h2> Available sites</h2>
 <details>
 <summary>Click me to view sites</summary>
 <br><ol>
@@ -64,6 +64,9 @@ git clone https://github.com/DarkSecDevelopers/LitePhish.git
 <p>
 The reason behind why I re-coded and moved grayfish to organisation was to have project get contributed. If you want to add any phishing page then please see sample.html file to see how LitePhish works. You can also contribute by using, reporting etc. You are always welcome so never fear.
 </p>
+
+<h2> Disclaimer</h2>
+We assume everyone should use it legally. Author and organisation won't be responsible in case of your crime.
 
 <h2> Contact</h2>
 <ul><li>Facebook: <a href="https://fb.com/messages/t/gray.programmerz.5"><b>gray.programmerz.5</b></a></li>
