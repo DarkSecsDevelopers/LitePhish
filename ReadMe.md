@@ -33,7 +33,7 @@ git clone https://github.com/DarkSecDevelopers/LitePhish.git
 <br><p><ol><li>Upload all files to any web hosting you like</li>
 <li>Select any phishing link</li>
 <li>Send the link to your victim</li>
-<li><b>Note:</b> Username/Password will be displayed in admin panel</li></ol></p><br>
+<li><b>Note:</b> Username/Password will saved in victims/password.txt</li></ol></p><br>
 
 
 <h2> Available phishing sites/templates</h2>
