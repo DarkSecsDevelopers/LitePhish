@@ -1,0 +1,19 @@
+
+# HTID:10393615: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:10393615:
+# HTID:10393668: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+
+# Please remmeber
+# if your site have valid certificate then change filename from **remove_if_https.htaccess** to **.htaccess**
+# Else web broswers will probably say that site is insecure.
+
+#Redirect from http to https starts...
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#Redirect from http to https ends...
+
+#No display of files
+Options All -Indexes
+ 
