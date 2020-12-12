@@ -1,4 +1,6 @@
 <h1> LitePhish - written from scratch</h1>
+<a href=https://discord.gg/Hu5XPGMTuk><img src=https://img.shields.io/discord/787203724975931413?label=discord /></a>
+
 <p><a href=http://github.com/DarkSecDevelopers/LitePhish target=_blank>LitePhish</a> provides lite weight phishing pages with clean and minimal interface. <br>
 It is modified and lite version of <a href=http://www.github.com/graysuit/grayfish target=_blank>grayfish</a>.</p>
 
@@ -69,5 +71,7 @@ We assume everyone should use it legally. Author and organisation won't be respo
 <h2> Contact</h2>
 <ul><li>Facebook: <a href="https://fb.com/messages/t/gray.programmerz.5"><b>gray.programmerz.5</b></a></li>
 <li>Email: <b><a href="mailto:hackrefisher@gmail.com">hackrefisher@gmail.com</a></b></li>
-<li>Website: <a href="https://tiplava.blogspot.com/"><b>tiplava</b></a></li></ul>
+<li>Website: <a href="https://tiplava.blogspot.com/"><b>tiplava</b></a></li>
+<li>Discord: <a href="https://discord.gg/Hu5XPGMTuk"><b>Fishes</b></a></li>
+</ul>
 <h1>I Love ALLAH + Holy Prophet + Islam and Pakistan.</h1>
