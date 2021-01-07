@@ -13,6 +13,7 @@ It is modified and lite version of <a href=http://www.github.com/graysuit/grayfi
 <b>Added:</b> Clicking on textarea will automatically copy URL. Reason : for ease<br>
 <b>Added:</b> Redirection url as parameter to phishing page. Reason : for ease<br>
 <b>Added:</b> Clean and colorfull panel. Reason : for good feelings  <br>
+<b>Added:</b> Detect web crawlers by IP. Reason : prevents analysis and link blockage by web crawler bots like googlebot,facebot etc.  <br>
 
 
 
@@ -23,7 +24,9 @@ It is modified and lite version of <a href=http://www.github.com/graysuit/grayfi
 <li>Codes are highly compressed. Extra codes have been removed.</li>
 <li>Login form can't be bypass until all inputs have been filled by a victim.</li>
 <li><del>Link with custom preview(image + title + description) when shared on any website.</del></li>
-<li><del>Admin login</del> panel has been created for absolute dummies.</li></ul><br>
+<li><del>Admin login</del> panel has been created for absolute dummies.</li>
+<li>Detect bots by their IP & UserAgent and block them to prevent link blockage..</li>
+</ul><br>
 
 <center><img src="./screenshot.png" style="width:100%;align:middle;border:0;" alt="LitePhish"></center>
 
