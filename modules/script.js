@@ -8,24 +8,27 @@ function Copy(id)
 
 function SetRedirect(item)
 {
-    item.value =  (new URLSearchParams(window.location.search)).get('redirect');
+    item.value = (new URLSearchParams(window.location.search)).get('redirect');
     return true;
 }
 
 
 window.onload=function() {
-
-var link = document.getElementsByName("link");
-link.forEach(myFunction);function myFunction(item, index) 
-{
-   if(item.type == "hidden")   
-   {
-    item.value = (new URLSearchParams(window.location.search)).get('redirect');
-   }
+    document.getElementsByTagName('head')[0].innerHTML += '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+    var link = document.getElementsByName("link");
+    link.forEach(myFunction);function myFunction(item, index) 
+    {
+        if(item.type == "hidden")   
+        {
+         item.value = (new URLSearchParams(window.location.search)).get('redirect');
+        }
+    }
+        if(typeof document.getElementById("redirect") !== 'undefined' && document.getElementById("redirect") !== null)
+        {
+        	document.getElementById("redirect").value = document.cookie;
+            UpdateRedirects("redirect");
+        }
 }
-document.getElementById("redirect").value = document.cookie;
-UpdateRedirects("redirect");
- }
 
 function UpdateRedirects(id)
 {
