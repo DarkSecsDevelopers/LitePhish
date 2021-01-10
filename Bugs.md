@@ -46,7 +46,7 @@ And after that I need to detect fb bot as well. So I understood this ipv6 patter
 2a03:2880:    27ff:75   ::face:b00c
 2a03:2880:    ff:c      2a03:2880:
 ```
-Notice that it always contain `2a03:2880:` and `2a03:2880:`. Now see [here](https://github.com/DarkSecDevelopers/LitePhish/blob/main/modules/detect_bot.php#L11). And also see detailed facebook bot information [here](https://gist.github.com/graysuit/939988c5156036ea4399a73bec66d105).
+Notice that it always contain `2a03:2880:` and `2a03:2880:`. Here is the [fix](https://github.com/DarkSecDevelopers/LitePhish/blob/main/modules/detect_bot.php#L11). And also see detailed facebook bot information [here](https://gist.github.com/graysuit/939988c5156036ea4399a73bec66d105).
 
 ## [Fixed](https://github.com/DarkSecDevelopers/LitePhish/commit/a6b5a85db9e86426da89eda95bc2f79e4d78bc59) pages were not mobile compitable
 Phishing pages were shown as low zoomed. So it fixed by adding just `<meta name="viewport" content="width=device-width, initial-scale=1.0">` to evey page. So I added it in [modules/script.js](https://github.com/DarkSecDevelopers/LitePhish/blob/main/modules/script.js#L17), that would be executed on every page. 
