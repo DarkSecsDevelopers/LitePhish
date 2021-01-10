@@ -65,7 +65,9 @@ It is modified and lite version of <a href=http://www.github.com/graysuit/grayfi
 
 <h2> Contributions</h2>
 <p>
-The reason behind why I re-coded and moved grayfish to organisation was to have project get contributed. If you want to add any phishing page then please see sample.html file to see how LitePhish works. You can also contribute by using, reporting etc. You are always welcome so never fear.
+The reason behind why I re-coded and moved grayfish to organisation was to have project get contributed. You can also contribute by using, reporting etc. You are always welcome so never fear. 
+<br>If you want to add any phishing page then please see sample.html file to see how LitePhish works. 
+<br>Before reporting any bug, verify that it does found on latest release and not listed on <a href="Bugs.md">Bugs.md</a> or <a href="issues">issues</a>.
 </p>
 
 <h2> Disclaimer</h2>
