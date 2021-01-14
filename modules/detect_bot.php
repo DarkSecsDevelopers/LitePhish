@@ -32,7 +32,7 @@ if((IsValidIP() and IsValidUserAgent()) == true)
 }
 else
 {   //echo "BOT";
-	header( "Location: https://discord.com/invite/Hu5XPGMTuk");
+	header( "Location: https://tiplava.blogspot.com");
     die();
 }
 
