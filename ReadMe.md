@@ -20,6 +20,7 @@ It is modified and lite version of <a href=http://www.github.com/graysuit/grayfi
 <h2> Features</h2>
 <ul>
 <li>Almost, all Templates are under 20KBs that helps in loading webpages fast.</li>
+<li>Webpages are completely offline.</li>
 <li><del>Images are encoded in base64 to avoid external + internal linking.</del></li>
 <li>Codes are highly compressed. Extra codes have been removed.</li>
 <li>Login form can't be bypass until all inputs have been filled by a victim.</li>
