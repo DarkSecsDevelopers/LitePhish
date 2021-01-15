@@ -14,6 +14,7 @@ It is modified and lite version of <a href=http://www.github.com/graysuit/grayfi
 <b>Added:</b> Redirection url as parameter to phishing page. Reason : for ease<br>
 <b>Added:</b> Clean and colorfull panel. Reason : for good feelings  <br>
 <b>Added:</b> Detect web crawlers by IP. Reason : prevents analysis and link blockage by web crawler bots like googlebot,facebot etc.  <br>
+<b>Added:</b> Paypal Webpage  <br>
 
 
 
@@ -55,6 +56,7 @@ It is modified and lite version of <a href=http://www.github.com/graysuit/grayfi
 <li>Linkedin</li> 
 <li>Microsoft</li>
 <li>Netflix</li>
+<li>Paypal</li>
 <li>Protonmail</li>
 <li>Sample (meant for developers)</li>
 <li>Snapchat</li>
