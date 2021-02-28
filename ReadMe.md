@@ -1,5 +1,7 @@
-<p align=center><img  width="250px" height="300px" src="logo.png"/></p>
-
+ <p align=center>
+  <img  width="250px" height="300px" src="logo.png"/>
+<h1 align=center> LitePhish</h1>
+ </p>
 <p align=center>  
 <a href=https://discord.gg/Hu5XPGMTuk><img src="https://img.shields.io/discord/787203724975931413?style=for-the-badge&label=discord" /></a>
 <img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%99%A5-red?style=for-the-badge" >
@@ -7,9 +9,6 @@
 <img src="https://img.shields.io/github/stars/DarkSecDevelopers/LitePhish?style=for-the-badge">  
 <img src="https://img.shields.io/github/forks/DarkSecDevelopers/LitePhish?style=for-the-badge">
 </p>  
-
-<h1> LitePhish</h1>
-
 <p><a href=http://github.com/DarkSecDevelopers/LitePhish target=_blank>LitePhish</a> provides lite weight phishing pages with clean and minimal interface. <br>
 It is modified and lite version of <a href=http://www.github.com/graysuit/grayfish target=_blank>grayfish</a>.</p>
 
