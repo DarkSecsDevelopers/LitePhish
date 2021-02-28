@@ -12,7 +12,6 @@ function SetRedirect(item)
     return true;
 }
 
-
 window.onload=function() {
     document.getElementsByTagName('head')[0].innerHTML += '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
     var link = document.getElementsByName("link");
@@ -25,21 +24,19 @@ window.onload=function() {
     }
         if(typeof document.getElementById("redirect") !== 'undefined' && document.getElementById("redirect") !== null)
         {
-        	document.getElementById("redirect").value = document.cookie;
+        	document.getElementById("redirect").value = document.cookie.match(new RegExp('redirect=(.*?);', 'i'))[1];
             UpdateRedirects("redirect");
         }
 }
 
 function UpdateRedirects(id)
 {
-
 	var textarea = document.getElementsByTagName('textarea');
 	var a = document.getElementsByTagName('a');
 	var value = document.getElementById(id).value;
 	var Url;
 	if(value == '' || value == null) { return null; }
-	document.cookie = value;
-
+	document.cookie = "redirect=" + value + ";";
     for(var i = 0; i < textarea.length; i++)
     {
  		Url = textarea[i].innerHTML;
