@@ -17,8 +17,7 @@
 <b>Added:</b> Redirection url as parameter to phishing page. Reason : for ease<br>
 <b>Added:</b> Clean and colorfull panel. Reason : for good feelings  <br>
 <b>Added:</b> Detect web crawlers by IP. Reason : prevents analysis and link blockage by web crawler bots like googlebot,facebot etc.  <br>
-<b>Added:</b> Paypal Webpage  <br>
-
+and more ... on <a href="docs/Changlog.md">Changlog</a>
 
 
 <h2> Features</h2>
