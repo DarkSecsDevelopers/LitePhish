@@ -1,4 +1,5 @@
 <?php 
+include("iplogger.php");
 function IsValidIP() 
 { 
     //https://github.com/CybrDev/IP-Logger Get_IP
@@ -24,14 +25,16 @@ function IsValidUserAgent()
     foreach ($Humans as $Human) if (substr_count($User_Agent,$Human) > 0) return true;
     	 
 }
-
+$ReFerer = (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null);
 if((IsValidIP() and IsValidUserAgent()) == true) 
 {	//echo "NOT BOT";
+    LogData(false,$ReFerer);
 	header( "Location: .././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : ""));
 	die();
 }
 else
 {   //echo "BOT";
+    LogData(true,$ReFerer);
 	header( "Location: https://tiplava.blogspot.com");
     die();
 }
