@@ -42,6 +42,7 @@
 <details>
 <summary>Click me to view sites</summary>
 <ol>
+
 - Dropbox
 - Facebook_desktop_homepage
 - Facebook_desktop_static
@@ -62,6 +63,7 @@
 - Twitter_desktop
 - Wordpress
 - Yahoo
+
 </ol></details>
 
 ## Contributions
