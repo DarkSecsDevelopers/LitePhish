@@ -73,7 +73,7 @@
 <p>
 The reason behind why I re-coded and moved grayfish to organisation was to have project get contributed. You can also contribute by using, reporting etc. You are always welcome so never fear. 
 <br><b>Webpage:</b> If you want to add any phishing page then please see sample.html file to see how LitePhish works. 
-<br><b>Bugs:</b> Before reporting any bug, verify that it does found on latest release and not listed on <a href="Bugs.md">Bugs.md</a> or <a href="issues">issues</a>.<br>
+<br><b>Bugs:</b> Before reporting any bug, verify that it does found on latest release and not listed on <a href="docs/Bugs.md">Bugs</a> or <a href="issues">issues</a>.<br>
 <b>Todo: </b> Add Google phishing page, send info via mail or sms (php).
 </p>
 
