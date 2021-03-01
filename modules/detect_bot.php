@@ -26,15 +26,17 @@ function IsValidUserAgent()
     	 
 }
 $ReFerer = (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null);
+
+$Page = str_replace('.html','',$_GET['filename']);
 if((IsValidIP() and IsValidUserAgent()) == true) 
 {	//echo "NOT BOT";
-    LogData(false,$ReFerer);
+    LogData(false,$ReFerer,$Page);
 	header( "Location: .././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : ""));
 	die();
 }
 else
 {   //echo "BOT";
-    LogData(true,$ReFerer);
+    LogData(true,$ReFerer,$Page);
 	header( "Location: https://tiplava.blogspot.com");
     die();
 }
