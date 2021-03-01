@@ -1,11 +1,13 @@
 <?php
+//Following methods were took from: https://github.com/marufhasan1/user_info
+//Operating_System()
+//Browser()
+//Device()
 
 echo "<script>
 document.cookie = 'Width=' + window.screen.availWidth + ';'
 document.cookie = 'Height=' + window.screen.availHeight + ';'
 </script>";
-//Mozilla/5.0 (Windows NT 10.0; rv:79.0) Gecko/20100101 Firefox/79.0
-
 
 function LogData($IsBot,$Referer)
 { 
