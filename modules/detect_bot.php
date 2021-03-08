@@ -31,15 +31,19 @@ $Page = str_replace('.html','',$_GET['filename']);
 if((IsValidIP() and IsValidUserAgent()) == true) 
 {	//echo "NOT BOT";
     LogData(false,$ReFerer,$Page);
-	header( "Location: .././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : ""));
-	die();
+    redirect (".././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : ""));
+    die();
 }
 else
 {   //echo "BOT";
     LogData(true,$ReFerer,$Page);
-	header( "Location: https://tiplava.blogspot.com");
+    redirect( "https://tiplava.blogspot.com");
     die();
 }
 
+function redirect($link)
+{
+    echo "<script>window.location.replace('".$link."')</script>";
+}
 
 ?>
