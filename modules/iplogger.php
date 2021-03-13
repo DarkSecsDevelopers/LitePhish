@@ -31,7 +31,6 @@ function LogData($IsBot,$Referer,$Page)
     send($data);
 }
 
-
 function Operating_System($user_agent) 
 {
     $Operating_Systems = array(
