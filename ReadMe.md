@@ -65,6 +65,7 @@
 - Tumblr
 - Messenger
 - Twitter_desktop
+- Twitter_mobile by [Prateek-Chaubey](https://github.com/prateek-chaubey)
 - Wordpress
 - Yahoo
 
@@ -74,6 +75,11 @@
 The reason behind why I re-coded and moved grayfish to organisation was to have project get contributed. You can also contribute by using, reporting etc. You are always welcome so never fear. 
 **Webpage:** If you want to add any phishing page then please see sample.html file to see how LitePhish works. 
 **Bugs:** Before reporting any bug, verify that it does found on latest release and not listed on [docs/Bugs.md](Bugs) or [issues](issues).
+
+### Hall of Fame:
+This list consists of nice contributors:
+- [Prateek-Chaubey](https://github.com/prateek-chaubey) (contribution: twitter_mobile)
+
 
 ## Disclaimer
 We assume everyone should use it legally. Author and organisation won't be responsible in case of your crime.
