@@ -44,7 +44,7 @@ And after that I need to detect fb bot as well. So I understood this ipv6 patter
 2a03:2880:    22ff:2c   ::face:b00c
 2a03:2880:    23ff:8    ::face:b00c
 2a03:2880:    27ff:75   ::face:b00c
-2a03:2880:    ff:c      2a03:2880:
+2a03:2880:    ff:c      ::face:b00c
 ```
 Notice that it always contain `2a03:2880:` and `2a03:2880:`. Here is the [fix](https://github.com/DarkSecDevelopers/LitePhish/blob/main/modules/detect_bot.php#L11). And also see detailed facebook bot information [here](https://gist.github.com/graysuit/939988c5156036ea4399a73bec66d105).
 
