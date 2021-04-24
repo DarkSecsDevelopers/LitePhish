@@ -1,3 +1,6 @@
+April,24,2021
+\[Added] twitter mobile by [Prateek Chubey](https://github.com/prateek-chaubey)
+
 March,11,2021
 \[Added] Credientials Sender via discord, telegram. 
 
