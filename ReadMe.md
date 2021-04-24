@@ -79,7 +79,8 @@ The reason behind why I re-coded and moved grayfish to organisation was to have 
 ### Hall of Fame:
 This list consists of nice contributors:
 - [Prateek-Chaubey](https://github.com/prateek-chaubey) (contribution: twitter_mobile)
-
+- Applesiensam (Forgotten, contribution:reported bugs)
+- Forgotten (it may be you as well)
 
 ## Disclaimer
 We assume everyone should use it legally. Author and organisation won't be responsible in case of your crime.
