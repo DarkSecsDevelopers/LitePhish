@@ -47,28 +47,28 @@
 <summary>Click me to view sites</summary>
 <ol>
 
-- Dropbox
-- Facebook_desktop_homepage
-- Facebook_desktop_static
-- Facebook_mobile + 2FA
-- Facebook_mobile_fake_security
-- Github
-- Garena Free Fire
-- Instagram
-- Linkedin 
-- Microsoft
-- Netflix
-- Paypal
-- Protonmail
-- PUBG fake UC generator by [Prateek-Chaubey](https://github.com/prateek-chaubey)
-- Sample (meant for developers)
-- Snapchat
-- Tumblr
-- Messenger
-- Twitter_desktop
-- Twitter_mobile by [Prateek-Chaubey](https://github.com/prateek-chaubey)
-- Wordpress
-- Yahoo
+1. Dropbox
+2. Facebook_desktop_homepage
+3. Facebook_desktop_static
+4. Facebook_mobile + 2FA
+5. Facebook_mobile_fake_security
+6. Github
+7. Garena Free Fire
+8. Instagram
+9. Linkedin 
+10. Microsoft
+12. Netflix
+13. Paypal
+14. Protonmail
+15. PUBG fake UC generator by [Prateek-Chaubey](https://github.com/prateek-chaubey)
+16. Sample (meant for developers)
+17. Snapchat
+18. Tumblr
+19. Messenger
+20. Twitter_desktop
+21. Twitter_mobile by [Prateek-Chaubey](https://github.com/prateek-chaubey)
+22. Wordpress
+23. Yahoo
 
 </ol></details>
 
