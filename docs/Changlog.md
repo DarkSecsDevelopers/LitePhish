@@ -1,3 +1,6 @@
+April,26,2021
+\[Added] PUBG fake UC generator by [Prateek Chubey](https://github.com/prateek-chaubey)
+
 April,24,2021
 \[Added] twitter mobile by [Prateek Chubey](https://github.com/prateek-chaubey)
 
