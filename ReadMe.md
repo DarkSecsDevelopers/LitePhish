@@ -79,6 +79,7 @@ The reason behind why I re-coded and moved grayfish to organisation was to have 
 
 ### Hall of Fame:
 This list consists of nice contributors:
+- [Maruf hasan ](https://github.com/marufhasan1/) (contribution: [userinfo](https://github.com/marufhasan1/user_info))
 - [Prateek-Chaubey](https://github.com/prateek-chaubey) (contribution: twitter_mobile,pubg fake UC generator)
 - Applesiensam (Forgotten, contribution:reported bugs)
 - Forgotten (it may be you as well)
