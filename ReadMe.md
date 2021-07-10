@@ -72,12 +72,15 @@
 
 </ol></details>
 
+## Tutorial
+Video: https://www.instagram.com/p/CMXzc07gC-4 <br>
+Article: https://esgeeks.com/litephish-phishing-panel-grafico
+
 ## Contributions
 The reason behind why I re-coded and moved grayfish to organisation was to have project get contributed. You can also contribute by using, reporting etc. You are always welcome so never fear. 
 **Webpage:** If you want to add any phishing page then please see sample.html file to see how LitePhish works. 
 **Bugs:** Before reporting any bug, verify that it does found on latest release and not listed on [docs/Bugs.md](Bugs) or [issues](issues).
 
-### Hall of Fame:
 This list consists of nice contributors:
 - [Maruf hasan ](https://github.com/marufhasan1/) (contribution: [userinfo](https://github.com/marufhasan1/user_info))
 - [Prateek-Chaubey](https://github.com/prateek-chaubey) (contribution: twitter_mobile,pubg fake UC generator)
