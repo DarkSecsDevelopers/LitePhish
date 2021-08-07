@@ -3,7 +3,7 @@
 <h2 align=center> LitePhish</h2>
 <p align=center><a href=http://github.com/DarkSecDevelopers/LitePhish target=_blank>LitePhish</a> provides lite weight phishing pages with clean and minimal interface. It is modified and lite version of <a href=http://www.github.com/graysuit/grayfish target=_blank>grayfish</a>.</p></p>
 <p align=center>  
-<a href=https://discord.gg/Hu5XPGMTuk><img src="https://img.shields.io/discord/787203724975931413?style=for-the-badge&label=discord" /></a>
+<a href=https://discord.gg/JeBrJNvzuK><img src="https://img.shields.io/discord/787203724975931413?style=for-the-badge&label=discord" /></a>
 <img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%99%A5-red?style=for-the-badge" >
 <a href=LICENSE><img title="GitHub version" src="https://img.shields.io/github/license/DarkSecDevelopers/LitePhish?style=for-the-badge" ></a>
 <img src="https://img.shields.io/github/stars/DarkSecDevelopers/LitePhish?style=for-the-badge">  
@@ -94,5 +94,5 @@ We assume everyone should use it legally. Author and organisation won't be respo
 - Facebook: **[gray.programmerz.5](https://fb.com/messages/t/gray.programmerz.5)**
 - Email: **[hackrefisher@gmail.com](mailto:hackrefisher@gmail.com)**
 - Website: **[tiplava](http://tiplava.blogspot.com)**
-- Discord: **[Fishes](https://discord.gg/Hu5XPGMTuk)**
+- Discord: **[Fishes](https://discord.gg/JeBrJNvzuK)**
 # I Love ALLAH + Holy Prophet + Islam and Pakistan.
