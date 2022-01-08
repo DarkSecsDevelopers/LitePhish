@@ -90,9 +90,5 @@ This list consists of nice contributors:
 ## Disclaimer
 We assume everyone should use it legally. Author and organisation won't be responsible in case of your crime.
 
-## Contact
-- Facebook: **[gray.programmerz.5](https://fb.com/messages/t/gray.programmerz.5)**
-- Email: **[hackrefisher@gmail.com](mailto:hackrefisher@gmail.com)**
-- Website: **[tiplava](http://tiplava.blogspot.com)**
-- Discord: **[Cody](http://graysuit.github.io)**
-# I Love ALLAH + Holy Prophet + Islam and Pakistan.
+
+# I Love Hande-Ercel + Yohani + Rashmika and Vidy Balan.
